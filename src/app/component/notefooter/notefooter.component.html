@@ -1,0 +1,39 @@
+<mat-card-footer>
+    <button mat-icon-button style="cursor: pointer" class="edit-label">
+        <mat-icon>add_alert</mat-icon>
+    </button>
+    <button mat-icon-button style="cursor: pointer" class="edit-label">
+        <mat-icon>insert_photo</mat-icon>
+    </button>
+    <button mat-icon-button style="cursor: pointer" class="edit-label" (click)="archiveNote(note)">
+        <mat-icon>archive</mat-icon>
+
+    </button>
+    <button mat-icon-button style="cursor: pointer" class="edit-label">
+        <mat-icon>person_add</mat-icon>
+    </button>
+    <mat-menu #labelMenu="matMenu">
+        <mat-card>
+            <form [formGroup]="labelForm">
+                <mat-form-field class="full-width" appearance="legacy">
+                    <mat-label>Label Name</mat-label>
+                    <input type="text" matInput formControlName="labelName" class="label-create-box">
+                </mat-form-field>
+            </form>
+            <div *ngFor="let label of labels">
+
+                <mat-checkbox (click)=$event.stopPropagation() (click)="labelClicked(label,note)">{{label.labelName}}
+                </mat-checkbox>
+            </div>
+        </mat-card>
+    </mat-menu>
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item (click)="toThrashNote(note)">Delet Note</button>
+
+        <button mat-menu-item [matMenuTriggerFor]="labelMenu">Add Label</button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu" overlapTrigger="true">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+
+</mat-card-footer>

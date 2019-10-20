@@ -1,0 +1,80 @@
+// .edit-note{
+//     background: #fff;
+//     background-clip: padding-box;
+//     outline: 0;
+//    width: 600px;
+//    height: 300px;
+// }
+// .cancel-icon
+// {
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     -webkit-background-size: 18px 18px;
+//     background-size: 18px 18px;
+//     border: 1px solid transparent;
+//     height: 24px;
+//     opacity: .54;
+//     width: 24px;
+// }
+
+// .text{
+//     background-color: transparent;
+//     border: none;
+//     border-bottom: 1px solid transparent;
+//     -webkit-box-shadow: none;
+//     box-shadow: none;
+//     color: #3c4043;
+//     font-size: 13px;
+//     font-family: 'Roboto',arial,sans-serif;
+//     height: 25px;
+//     outline: none;
+//     padding: 0;
+// }
+
+// .done-icon{
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     -webkit-background-size: 18px 18px;
+//     background-size: 18px 18px;
+//     border: 1px solid transparent;
+//     height: 24px;
+//     opacity: .54;
+//     width: 24px;
+// }
+
+.buttons{
+    margin-right: 5px;
+    height : 30px;
+    margin-top: 10px;
+    float:left;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.new-Label{
+    margin-right: 5px;
+    height : 30px;
+    width: 220px;
+    margin-top: 10px;
+   margin-right: 20px;
+   margin-bottom: 10px;
+
+   
+}
+.right-buttons{
+    margin-top: 10px;
+    height : 30px;
+    
+    float:right;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.Label{
+    margin-right: 5px;
+    height : 60px;
+    width: 220px;
+    margin-top: 10px;
+   margin-right: 20px;
+   margin-bottom: 10px;
+}

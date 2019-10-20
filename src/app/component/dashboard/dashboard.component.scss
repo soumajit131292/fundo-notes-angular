@@ -1,0 +1,267 @@
+#fundo-text {
+    margin-top: 5px;
+    padding-left: 30px;
+  }
+   .container{
+    flex-direction: row; 
+    background:white;
+    display: flex;
+  }
+   .edit-label
+   {
+    padding-left: 32px;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: top;
+    width: 176px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   }
+  #keep-icon {
+    margin-top: 5px;
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+  }
+  .sidenav-icon-div {
+    width: 150px;
+      display: flex;
+      flex-direction: row; 
+      height: 25px;
+      background:white
+  }
+    .search-bar {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      width: 52vw;
+      height: 15px;
+       left:22%;
+     top:2%;
+   
+     /* overflow: visible; */
+  
+    }  
+    .refresh-button{
+      position: absolute;
+      left:78%;
+     top:3%;
+    }
+    .listview-button{
+      position: absolute;
+      left:83%;
+     top:3%;
+    }
+    .settings-button{
+      position: absolute;
+      left:88%;
+     top:3%; 
+    }
+    #profile-icon{
+      margin-top:-10px;
+      width: 49px;
+      height: 50px;
+      
+      border-radius: 50%;
+    }
+    .search-button,#search-button {
+      margin-top: -11px;
+    }
+  .form-control {
+      width: 90%;
+      height: 25px;
+      border: none;
+      font-size: 16px;
+      margin-top: -5px; 
+      outline:0;
+  }
+  
+  .drawer-outside
+  {
+    overflow: hidden;
+    padding: 0px;
+    display: flex;
+  }
+  .content{
+    height:1300px;
+  }
+  
+  .left
+  { 
+    width: 300px;
+    height: 500px;
+  
+  }
+  .notes-reminder,
+  {
+    display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+  }
+  .user-labels{
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 3px;
+  }
+  .label-icon{
+  
+    height: 24px;
+      width: 24px;
+      float: left;
+      margin-top: 8px;
+      vertical-align: middle;
+  }
+  .label-name{
+    padding-left: 32px;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: top;
+    width: 176px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .notes
+  {
+    display: block;
+    min-height: 40px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+  .note,.remainders
+  { padding-left: 32px;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: top;
+    width: 176px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+  }
+  .edit-label{
+      padding-left: 32px;
+      display: inline-block;
+      line-height: 40px;
+      vertical-align: top;
+      width: 176px;
+      white-space: nowrap;
+      overflow: hidden;
+    
+  }
+  
+  
+  .bulb,.bell
+  {
+    height: 24px;
+    width: 24px;
+    float: left;
+    margin-top: 8px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  .pen{
+    height: 24px;
+    width: 24px;
+    float: left;
+    margin-top: 5px;
+    
+  margin-left: 5px;  
+    vertical-align: middle;
+      
+  }
+  .box{
+    height: 24px;
+    width: 24px;
+    float: left;
+    margin-top: 8px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  .bucket{
+    height: 24px;
+    width: 24px;
+    float: left;
+    margin-top: 8px;
+    margin-left: 5px;
+    vertical-align: middle;
+  
+  }
+  heading
+  {
+   color: #5f6368;
+    cursor: default;
+    letter-spacing: .07272727em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: .6875rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-transform: uppercase;
+    padding: 15px 24px 10px;
+    margin-left: 5px;
+  
+  }
+  .label{
+   
+    display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 3px;
+  }
+  .archive-trash{
+    display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 3px;
+  }
+  .archives{
+    display: block;
+    min-height: 40px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+  .archive{
+    padding-left: 32px;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: top;
+    width: 176px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .trash{
+    padding-left: 32px;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: top;
+    width: 176px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .profile-button {
+    margin-left: auto;
+  }
+  
+  
+  
+  mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  

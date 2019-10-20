@@ -1,0 +1,42 @@
+<body>
+        <mat-card>
+    <form [formGroup]="userNoteForm" (ngSubmit)='onSubmit()'>
+
+        <div class="user-note" fxLyout="column" fxLayoutAlign="space-evenly stretch">
+
+
+            <div class="note-title" >
+                 <textarea cdkTextareaAutosize formControlName="title" [(ngModel)]="note.title" frommat-input
+                        autocomplete="off" placeholder="Title" cdkAutosizeMinRows="1"
+                        cdkAutosizeMaxRows="100"></textarea>
+            </div>
+
+
+           
+                <div class="note-description">
+                    <textarea cdkTextareaAutosize  formControlName="description" [(ngModel)]="note.description"
+                         cdkAutosizeMinRows="1" cdkAutosizeMaxRows="100"
+                        placeholder="description"></textarea>
+                </div>
+                <button mat-icon-button>
+                        <mat-icon>add_alert</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>insert_photo</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>archive</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>person_add</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-card-actions align="end">close</mat-card-actions>
+                    </button>
+            
+        </div>
+
+
+    </form>
+</mat-card>
+</body>

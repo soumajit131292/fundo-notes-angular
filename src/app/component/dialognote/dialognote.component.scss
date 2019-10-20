@@ -1,0 +1,36 @@
+// .user-note{
+//     width: fit-content;
+//     height: fit-content;
+//     place-content: center;
+//     align-items: center;
+//     border: none;
+//     display: flex;
+//     border-radius: 8px;
+//     margin-left: 15px;   
+//     margin-bottom: 30px;
+//     margin-top: 20px;
+//     display: flex;
+// }
+.note-title{
+    display: flex;
+    outline: none;
+    border: none;
+    display: block;
+    align-self: center;
+}
+
+
+.note.description{
+    display: flex;
+    outline: none;
+    border: 0px none;
+   
+    margin-left: 90px;
+}
+textarea{
+    border: none;
+    outline: none;
+}
+.card{
+    height: 280px;
+}

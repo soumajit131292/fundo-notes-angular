@@ -1,0 +1,30 @@
+<div fxLyout="row" fxLayoutAlign="left center" flex fxLayoutGap="1px">
+    <div *ngIf="trashnote? trashnote.length>0: false">
+        <div *ngFor="let notes of trashnote" class="note-card">
+            <mat-card style="margin-left:90px" autocomplete="off" role="combobox" flex="column">
+                <mat-card-content (click)="openDialogNote(notes)">
+                    <mat-card-title class="note-title">
+                        {{notes.title}}
+                    </mat-card-title>
+                    <mat-card-content class="note-description">
+                        {{notes.description}}
+                    </mat-card-content>
+
+                </mat-card-content>
+                <mat-card-footer class="note-footer">
+
+
+                    <mat-menu #appMenu="matMenu">
+                        <button mat-menu-item (click)="deleteNote(notes)">Delet Note</button>
+
+                        <button mat-menu-item (click)="restoreNote(notes)">Restore Note</button>
+                    </mat-menu>
+                    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                </mat-card-footer>
+
+            </mat-card>
+        </div>
+    </div>
+</div>

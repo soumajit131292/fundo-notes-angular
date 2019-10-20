@@ -1,0 +1,95 @@
+<!-- <div class="main-div">
+<mat-card-content fxLayout="column" fxLayoutAlign="center center">
+
+
+    <mat-card-header>
+
+            <mat-card-title>Login</mat-card-title>
+        
+          </mat-card-header>
+      
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="column" fxLayoutAlign="center center" class="login-container">
+    
+
+    <mat-form-field appearance="outline">
+            <mat-label>Enter Email</mat-label>
+            <input matInput placeholder="Enter EmailAddress" formControlName="email">
+            <span *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched" class="help-block" >It's a required field</span>
+    </mat-form-field><br>
+
+
+    <mat-form-field appearance="outline">
+            <mat-label>Enter Password</mat-label>
+            
+            <input matInput type="password" formControlName="password">
+            <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" class="help-block" >It,s a required field</span>
+    </mat-form-field><br>
+
+<mat-card-actions>
+
+   <button mat-raised-button color="primary">Login</button>
+
+
+<div class="button">
+  <button mat-raised-button color="primry"><a routerLink="/registration" routerLinkActive="active">Registration</a></button>
+</div>
+<div>
+    <button mat-raised-button color="primry"><a routerLink="/forgotpassword" routerLinkActive="active">Forgot Password</a></button>
+</div> 
+</mat-card-actions> 
+</div>     
+</form>
+
+
+</mat-card-content>
+</div> -->
+<div class="main-div">
+
+<mat-card fxLayout="column" fxLayoutAlign="center center" >
+<mat-card-content >
+
+    <mat-card-header>
+
+        <mat-card-title>Login</mat-card-title>
+
+    </mat-card-header>
+
+    <form [formGroup]="loginForm" (ngSubmit)='onSubmit()'>
+
+        <div fxLayout="column" fxLayoutAlign="center center" class="login-container">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email"  autocomplete="off">
+                <span *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched" class="help-block">It's a
+                    required field</span>
+            </mat-form-field><br>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password"  placeholder="Password" formControlName="password" 
+                    autocomplete="off">
+                <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched"
+                    class="help-block">It,s a required field</span>
+            </mat-form-field><br>
+            <mat-card-actions>
+                <button class="login-button" mat-raised-button  color="primary"
+                    align="end">Login</button>
+
+
+                <div class="button">
+                    <button mat-raised-button color="primry"><a routerLink="/registration"
+                            routerLinkActive="active">Registration</a></button>
+                </div>
+                <div>
+                    <button mat-raised-button color="primry"><a routerLink="/forgotpassword"
+                            routerLinkActive="active">Forgot Password</a></button>
+                </div>
+
+            </mat-card-actions>
+        </div>
+    </form>
+
+</mat-card-content>
+</mat-card>
+</div>

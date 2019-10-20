@@ -1,0 +1,51 @@
+<h1>Registration</h1>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+<div class="form-field" > 
+  <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="Enter First name" formControlName="firstName">
+          <span *ngIf="!signUpForm.get('firstName').valid && signUpForm.get('firstName').touched" class="help-block">please enter name</span>
+        </mat-form-field>
+ </div>
+
+
+ <div class="form-field"> 
+  <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Enter Last name" formControlName="lastName">
+        </mat-form-field>
+ </div>
+
+ <!-- <div class="form-field"> 
+  <mat-radio-group aria-label="Select an option" *ngFor="let gender of genders">
+    <mat-radio-button [value]="gender">{{ gender }}</mat-radio-button>></mat-radio-button>
+    </mat-radio-group>
+ </div> -->
+
+ <div class="form-field"> 
+  <mat-form-field appearance="outline">
+          <mat-label>password</mat-label>
+          <input matInput placeholder="Enter Password" formControlName="password">
+        </mat-form-field>
+ </div>
+
+ <div class="form-field"> 
+  <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Enter EmailAddress" formControlName="email">
+        </mat-form-field>
+ </div>
+
+ <div class="form-field"> 
+  <mat-form-field appearance="outline">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput placeholder="Enter Mobile Number" formControlName="mobileNumber">
+        </mat-form-field>
+      </div>
+
+    <div class="button">
+      
+      <button mat-raised-button color="primary">Register</button>
+    </div>
+    </form>
+

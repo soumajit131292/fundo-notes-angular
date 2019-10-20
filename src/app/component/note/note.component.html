@@ -1,0 +1,81 @@
+<div>
+    <div class=full-page>
+        <mat-card (click)="onClickForExpand()" *ngIf="!popup" flex="column">
+            <mat-card-content>
+                <input class="edit-note" type="text" placeholder="Take a note...">
+                <mat-icon class="image">image</mat-icon>
+
+            </mat-card-content>
+
+
+
+
+        </mat-card>
+    </div>
+
+    <div>
+        <form [formGroup]="noteForm" *ngIf="popup">
+            <mat-card style="margin-left:320px" autocomplete="off" role="combobox" flex="column" class="create-note">
+
+                <mat-card-title>
+                    <input type="text" formControlName="title" frommat-input autocomplete="off" placeholder="Title"
+                        class="note-title">
+                </mat-card-title>
+
+                <mat-card-content>
+                    <textarea cdkTextareaAutosize formControlName="description" #autosize="cdkTextareaAutosize"
+                        cdkAutosizeMinRows="1" cdkAutosizeMaxRows="100" class="note-description"
+                        placeholder="description"></textarea>
+                </mat-card-content>
+
+                <mat-card-footer>
+                    <button mat-icon-button>
+                        <mat-icon>add_alert</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>insert_photo</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>archive</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>person_add</mat-icon>
+                    </button>
+                    <mat-menu #appMenu="matMenu">
+                        <button mat-menu-item>Delet Note</button>
+                        <button mat-menu-item>Add Label</button>
+                    </mat-menu>
+
+                    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-card-actions align="end" (click)='onSubmit()'>close</mat-card-actions>
+                    </button>
+                </mat-card-footer>
+            </mat-card>
+        </form>
+    </div>
+    <div fxLyout="row" fxLayoutAlign="left center" flex fxLayoutGap="1px">
+        <div *ngIf="usernote? usernote.length>0: false">
+            <div *ngFor="let notes of usernote" class="note-card">
+                <mat-card style="margin-left:90px" autocomplete="off" role="combobox" flex="column">
+                    <mat-card-content (click)="openDialogNote(notes)">
+                        <mat-card-title class="note-title">
+                            {{notes.title}}
+                        </mat-card-title>
+                        <mat-card-content class="note-description">
+                            {{notes.description}}
+                        </mat-card-content>
+
+                    </mat-card-content>
+<mat-card-footer class="note-footer">
+
+    <app-notefooter [note]=notes (messageEvent)="eventHandler($event)"></app-notefooter>
+</mat-card-footer>
+                    
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

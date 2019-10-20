@@ -1,0 +1,27 @@
+<div>
+    <div fxLyout="row" fxLayoutAlign="left center" flex fxLayoutGap="1px">
+
+        <div *ngIf="usernote? usernote.length>0: false">
+            <div *ngFor="let notes of usernote;let tempIndex=index" class="note-card">
+                <mat-card style="margin-left:90px" autocomplete="off" role="combobox" flex="column">
+                    <mat-card-content (click)="openDialogNote(notes)">
+                        <mat-card-title class="note-title">
+                            {{notes.title}}
+                        </mat-card-title>
+                        <mat-card-content class="note-description">
+                            {{notes.description}}
+                        </mat-card-content>
+
+                    </mat-card-content>
+                    <mat-card-footer class="note-footer">
+
+                        <app-archivefooter [note]=notes (notify)="receiveMessage($event)"></app-archivefooter>
+
+
+                    </mat-card-footer>
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

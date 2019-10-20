@@ -1,0 +1,64 @@
+<body class="edit-note">
+    <div>
+        <mat-dialog-content>
+            <form [formGroup]="labelForm">
+                <div>
+
+                    <button mat-icon-button class="buttons">
+                            <mat-icon>clear</mat-icon>
+                        </button>
+                    <input formControlName="labelName" class="new-Label">
+                    <button (click)="onSubmit()" class="right-buttons">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                </div>
+
+            </form>
+
+
+
+           
+
+                <div *ngFor="let label of labels">
+                    <button mat-icon-button (click)="onDelet(label)" class="buttons">
+                            <mat-icon>label</mat-icon>
+                        </button>
+                    <textarea cdkTextareaAutosize [(ngModel)]="label.labelName" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" placeholder="description"
+                            class="new-Label"></textarea>
+                    <button mat-icon-button (click)="onUpdate(label)" class="right-buttons">
+                        <mat-icon>create</mat-icon>
+                    </button>
+                </div>
+            
+        </mat-dialog-content>
+    </div>
+</body>
+
+
+<!-- <span>Edit Labels</span>
+<mat-divider></mat-divider> -->
+
+<!-- <diV fxLayout="row">
+    <span><button mat-icon-button>
+            <mat-icon>close</mat-icon>
+        </button></span>
+    <span><textarea class="label-name" placeholder="create label" matInput #labelName matTextareaAutosize
+            matAutosizeMinRows=1></textarea></span>
+    <span><button mat-icon-button (click)="onSubmit()">
+            <mat-icon>create</mat-icon>
+        </button></span>
+</diV> -->
+<!-- <mat-divider></mat-divider>
+<span *ngIf="labels ? labels.length>0: false">
+    <span *ngFor="let label of labels" fxLayout="row" class="mat-icons">
+        <form [formGroup]="labelForm">
+
+            <span><textarea cdkTextareaAutosize formControlName="labelName" [(ngModel)]="label.labelName" 
+                    class="label-name"></textarea></span>
+            <span><button mat-icon-button (click)="onClick(label)">
+                    <mat-icon>create</mat-icon>
+                </button></span>
+        </form>
+        <mat-divider></mat-divider>
+    </span>
+</span> -->

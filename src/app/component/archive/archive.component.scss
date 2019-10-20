@@ -1,0 +1,73 @@
+.note-card  {
+   
+    // width: fit-content;
+    overflow: visible;
+   // height: fit-content;
+    max-width: 300px;
+    flex-wrap:wrap ;
+   
+    align-items: center;
+    
+    
+    border-radius: 15px;
+  
+    display: flex;
+        justify-content: space-between;
+    float: left;
+    padding-left: 18px;
+    margin: 15px 3px 5px 20px;
+}
+.full-page{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 230px;
+    margin-right: 270px;
+    height : auto;
+   
+    
+   
+    
+}
+.note-title{
+   
+   
+    display: flex;
+width: 290px;
+    outline: 0px;
+    border: 0px;
+    flex-wrap: wrap;
+
+}
+.note-description{
+
+display: flex;
+    outline: 0px;
+    border: 0px;
+}
+.create-note{
+    // display: flex;
+    padding-inline-start: 30px;
+    margin-left: 300px;
+    outline: 0px;
+    border: 0px;
+    width: 500px;
+}
+.edit-note{
+// display : flex;
+outline: none;
+    border: none;
+    align-items: center;
+
+}
+.image{
+    margin-top:-10px;
+    margin-left: 700px;
+}
+.label-create-box{
+    border : none;
+    outline : none;
+}
+.note-footer{
+    margin-left: -4px;
+
+}

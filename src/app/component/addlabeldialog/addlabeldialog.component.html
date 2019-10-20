@@ -1,0 +1,20 @@
+<body>
+    <mat-card>
+
+        <mat-dialog-content>
+
+            <mat-card-content>
+                <span>Label Name</span>
+                <input formControlName="labelName" class="new-Label">
+                <div *ngFor="let label of labels">
+                    <mat-checkbox>label.labelName</mat-checkbox>
+
+
+                </div>
+            </mat-card-content>
+
+        </mat-dialog-content>
+
+
+    </mat-card>
+</body>
